@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="ITVH">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Prototipo PicTime</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/all.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .fondo {
+            background-image: url(resources/img/fondo.jpg);
+            background-size: cover;
+            color: white;
+            text-shadow: 4px 4px 4px #000000;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100" style="background-color: rgb(245, 244, 241);">
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#" style="color:orange; font-size:25px; margin-left:21%">PicTime Admin</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <ul class="navbar-nav mr-auto" style="margin-left: 1%;">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index-admin.html">Inicio <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="perfil-admin.html">Mi perfíl</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Cerrar sesión</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar borrado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Seguro que deseas borrar? Una vez eliminada no podras recuperarla.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Borrar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="alert alert-danger">Se borró el registro el usuario XXXXXXX  XXXXXXX XXXXXX
+		<br><br>
+		<a class="btn btn-danger"  href='listado-usuarios.html'>Regresar</a>
+		</div> -->
+    <!-- Begin page content -->
+
+    <main class="row align-item-center justify-content-center" style="margin-top: 6%;">
+        <div class="content" style="width:35%;">
+            <center>
+                <h3>Listado de #Hashtags</h3>
+            </center>
+
+            <div class='container'>
+                <table class='table'>
+                    <tr>
+                        <th>No.</th>
+                        <th>Hashtag</th>
+                        <th>Tabla</th>
+                        <th>Gráfica</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>#holamundo</td>
+                        <td><a href="tabla-hashtags.html"><i class="fas  fa-table"></i></a></td>
+                        <td><a href="grafica1.html"><i class="fas fa-align-left"></i></a></td>
+
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>#VacacionesCancun</td>
+                        <td><a href="tabla-hashtags.html"><i class="fas  fa-table"></i></a></td>
+                        <td><a href="grafica-hashtags.html"><i class="fas fa-align-left"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>#ProgramacionWeb</td>
+                        <td><a href="tabla-hashtags.html"><i class="fas  fa-table"></i></a></td>
+                        <td><a href="grafica-hashtags.html"><i class="fas  fa-align-left"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>#populares</td>
+                        <td><a href="tabla-hashtags.html"><i class="fas  fa-table"></i></a></td>
+                        <td><a href="grafica-hashtags.html"><i class="fas fa-align-left"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>#instagood</td>
+                        <td><a href="tabla-hashtags.html"><i class="fas  fa-table"></i></a></td>
+                        <td><a href="grafica-hashtags.html"><i class="fas fa-align-left"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>#beautiful</td>
+                        <td><a href="tabla-hashtags.html"><i class="fas  fa-table"></i></a></td>
+                        <td><a href="grafica-hashtags.html"><i class="fas fa-align-left"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>#happy</td>
+                        <td><a href="tabla-hashtags.html"><i class="fas  fa-table"></i></a></td>
+                        <td><a href="grafica-hashtags.html"><i class="fas fa-align-left"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>#Prototipo</td>
+                        <td><a href="tabla-hashtags.html"><i class="fas  fa-table"></i></a></td>
+                        <td><a href="grafica-hashtags.html"><i class="fas fa-align-left"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>#PlayaHolbox</td>
+                        <td><a href="tabla-hashtags.html"><i class="fas  fa-table"></i></a></td>
+                        <td><a href="grafica-hashtags.html"><i class="fas fa-align-left"></i></a></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">Copyright &copy; PicTime by Hugiux</span>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="vendor/bootstrap/js/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</html>

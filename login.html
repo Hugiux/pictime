@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="ITVH">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Prototipo PicTime</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/all.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+</head>
+
+<div id="modalPassword" class="modal fade" role="dialog">
+    <div class="modal-dialog" style="position: center; top: 15%">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Contraseña</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <label for="email">Correo:</label>
+                        <input class="form-control input-md" type="email" name="email" holder="Correo">
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-secondary" style="margin-top:23%">Enviar código</button>
+                    </div>
+                </div>
+                <label for="cod">Código:</label>
+                <input class="form-control input-md" type="text" name="cod" holder="Código">
+                <label for="pass">Contraseña nueva:</label>
+                <input class="form-control input-md" type="password" name="pass" holder="Contraseña nueva">
+                <label for="pass2">Repita la contraseña:</label>
+                <input class="form-control input-md" type="password" name="pass2" holder="Repita la contraseña">
+            </div>
+            <div class="modal-footer">
+                <a href="login.html"><button type="submit" class="btn btn-info">Aceptar</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<body class="d-flex flex-column h-100" style="background-color: rgb(245, 244, 241);">
+    <main>
+        <center>
+            <div class="card" style="width: 350px; margin-top: 5%;">
+                <div class="card-body" style="margin-bottom: 5%;">
+                    <h1 style="margin-top: 5%;">PicTime</h1>
+                    <label for="user">Usuario:</label><br>
+                    <input class="form-control input-md" type="text" name="user" holder="Usuario"><br>
+                    <label for="pass">Contraseña:</label><br>
+                    <input class="form-control input-md" type="password" name="pass">
+                    <div class="row">
+                        <div class="col-md-12" style="margin-top: 6%;">
+                            <a href="index.html"><button class="btn btn-outline-info my-2 my-sm-0"
+                                    type="submit">Fotógrafo</button></a>
+                        </div>
+                        <div class="col-md-12" style="margin-top: 2%;">
+                            <a href="index-admin.html"><button class="btn btn-outline-success my-2 my-sm-0"
+                                    type="submit">Administrador</button></a>
+                        </div>
+                        <div class="col-md-12" style="margin-top: 2%;">
+                            <a href="index-visitante.html"><button class="btn btn-outline-warning my-2 my-sm-0"
+                                    type="submit">Visitante</button></a>
+                        </div>
+                        <div class="col-md-12" style="margin-top: 2%; margin-bottom: 5%;">
+                            <a href="index-inicial.html"><button class="btn btn-outline-danger my-2 my-sm-0"
+                                    type="submit">Continuar sin cuenta</button></a>
+                        </div>
+                    </div>
+                    <a href="" style="color: gray;" data-toggle="modal" data-target="#modalPassword"> ¿Olvidaste tu
+                        contraseña?</a>
+                </div>
+            </div>
+            <div class="card" style="width: 350px; margin-top: 1%;">
+                <div class="card-body">
+                    <h6>¿No tienes una cuenta? <a href="register.html">Registrate</a></h6>
+                </div>
+            </div>
+        </center>
+    </main>
+</body>
+<footer class="footer mt-auto py-3">
+    <div class="container">
+            <span class="text-muted">Copyright &copy; PicTime by Hugiux</span>
+    </div>
+</footer>
+<!-- Bootstrap core JavaScript
+        ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="vendor/bootstrap/js/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/popper.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</html>

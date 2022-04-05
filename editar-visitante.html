@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="ITVH">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Prototipo PicTime</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/all.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .fondo {
+            background-image: url(resources/img/fondo.jpg);
+            background-size: cover;
+            color: white;
+            text-shadow: 4px 4px 4px #000000;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100" style="background-color: rgb(245, 244, 241);">
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#" style="color:orange; font-size:25px; margin-left:21%">PicTime</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <form class="form-inline mt-2 mt-md-auto">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label=""
+                        style="width: 520px;">
+                    <a href="buscar-visitante.html"><button class="btn btn-outline-warning my-2 my-sm-0"
+                            type="button">Buscar</button></a>
+                </form>
+
+                <ul class="navbar-nav mr-auto" style="margin-left: 1%;">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index-visitante.html">Inicio <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="perfil-visitante.html">Mi perfíl</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Cerrar sesión</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+    
+
+    <!-- Begin page content -->
+    <main role="main" class="row align-item-center justify-content-center" style="margin-top: 6%;">
+        <form action="" class="content" style="width:50%;">
+            <h3>Perfil público</h3>
+            <p>Las personas que visiten tu perfil verán la siguiente información</p>
+            <div class="row" style="margin-bottom: 2%;">
+                <div class="col-md-2">
+                    <img src='resources/img/perfil3.jpg' class="bd-placeholder-img rounded-circle" width="100px"
+                        height="100px">
+                </div>
+                <div class="col-md-10">
+                    <label for="foto-perfil">Cambiar foto</label><br>
+                    <input type="file" name="foto-perfil" class="btn btn-secondary" style="width:40%">
+                </div>
+            </div>
+            <label for="usuario">Nombre de usuario</label>
+            <input type="text" name="usuario" placeholder="Escriba su nuevo usuario" class="form-control input-md"
+                style="width:55%" value="LoreLeon23">
+            <br>
+            <div class="row" style="width: 50%;">
+                <div class="col-md-4">
+                    <label for="usuario">Nombre(s)</label>
+                    <input type="text" name="usuario" class="form-control input-md" value="Lorena">
+                </div>
+                <div class="col-md-4">
+                    <label for="paterno">Apellido paterno</label>
+                    <input type="text" name="paterno" class="form-control input-md" value="León">
+                </div>
+                <div class="col-md-4">
+                    <label for="materno">Apellido materno</label>
+                    <input type="text" name="materno" class="form-control input-md" value="Isidro">
+                </div>
+            </div>
+            <br>
+            
+            <h3>Información personal</h3>
+            <p>Edita tu información personal básica para mejorar las recomendaciones. <br> Esta información es
+                privada y no aparecerá en tu perfil público.</p>
+            <label for="genero">Género</label>
+            <div>
+                <div class="row" style="width: 50%;">
+                    <div class="col-md-3">
+                        <input type="radio" id="hombre" name="genero" value="hombre" >
+                        <label for="hombre">Hombre</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="radio" id="mujer" name="genero" value="mujer" checked>
+                        <label for="mujer">Mujer</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="radio" id="Indefinido" name="genero" value="Indefinido">
+                        <label for="Indefinido">Indefinido</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <label for="Correo">Correo</label>
+            <input type="email" name="Correo" class="form-control input-md" style="width:55%"
+                value="loreleon13@gmai.com">
+            <br>
+            <label for="Celular">Celular</label>
+            <input type="tel" name="Celular" class="form-control input-md" style="width:55%" value="993-3564-021">
+            <br>
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input type="date" name="nacimiento" class="form-control input-md" style="width:55%" value="1996-11-13">
+            <br>
+            <label for="pais">País</label>
+            <select id="pais" name="pais" class="form-control" style="width:55%">
+                <option value="1">Estados Unidos</option>
+                <option value="2">Italia</option>
+                <option value="3" selected>México</option>
+                <option value="4">Rusia</option>
+            </select>
+            <br>
+            <a href="editar-perfil.html" style="margin-left: 20%;"><button type="submit" class="btn btn-info" style="width: 200px">Guardar cambios</button></a>
+        </form>
+    </main>
+
+
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">Copyright by Hugo &copy; Instituto Tecnológico de Villahermosa</span>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="vendor/bootstrap/js/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</html>

@@ -1,0 +1,302 @@
+﻿<!doctype html>
+<html lang="es" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="ITVH">
+  <meta name="generator" content="Jekyll v3.8.5">
+  <title>Prototipo PicTime</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/fontawesome/css/all.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .fondo {
+      background-image: url(resources/img/fondo.jpg);
+      background-size: cover;
+      color: white;
+      text-shadow: 4px 4px 4px #000000;
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="sticky-footer-navbar.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100" style="background-color: rgb(245, 244, 241);">
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#" style="color:orange; font-size:25px; margin-left:21%">PicTime</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <form class="form-inline mt-2 mt-md-auto">
+          <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="" style="width: 520px;">
+          <a href="buscar.html"><button class="btn btn-outline-warning my-2 my-sm-0" type="button">Buscar</button></a>
+          <p>.</p>
+          <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-toggle="modal"
+            data-target="#myModal">Subir
+            foto</button>
+        </form>
+
+        <ul class="navbar-nav mr-auto" style="margin-left: 1%;">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="mi-perfil.html">Mi perfíl</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Cerrar sesión</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+  <!-- Modal subir foto -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" style="position: center; top: 15%">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>Crear una nueva publicación</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-7">
+              <img src="resources/img/foto.jpg" width="100%" height="100%">
+            </div>
+            <div class="col-md-5">
+              <div class="row" style="margin: 3% 2% 2% 1%;">
+                <div class="col-md-1" style="margin-right:2%; margin-top:1%">
+                  <img src='resources/img/perfil1.jpg' class="bd-placeholder-img rounded-circle" width="30" height="30"
+                    preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+                </div>
+                <div class="col-md-10">
+                  <h6 style="margin: 4% 3%;">@hugiux</h6>
+                </div>
+              </div>
+              <form action="">
+                <textarea class="form-control textarea-md" placeholder="Escribe una descripción..." cols="30"
+                  rows="4">La belleza, el orden y el desorden se dan la mano en una imagen transmitida a través de esta cita Paul Cezanne.</textarea>
+                <input type="text" placeholder="#Hashtags" class="form-control input-md"
+                  value="#ProgramacionWeb #Prototipo">
+                <div class="row">
+                  <div class="col-6">
+                    <input type="text" placeholder="Latitud" class="form-control input-md" value="21.8628600°">
+                  </div>
+                  <div class="col-6">
+                    <input type="text" placeholder="Longitud" class="form-control input-md" value="-102.9110500°">
+                  </div>
+                </div>
+                <select class="form-control">
+                  <option value="1">Selfi</option>
+                  <option value="2" selected>Retrato</option>
+                  <option value="3">Panoramica</option>
+                  <option value="4">Objetos</option>
+                </select>
+                <input type="file" name="foto-perfil" class="btn btn-secondary" style="width:100%">
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="index.html"><button type="submit" class="btn btn-info">Subir publicación</button></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Begin page content -->
+  <main role="main" class="flex-shrink-0">
+    <div class="container marketing">
+      <!-- Three columns of text below the carousel -->
+      <div class="row" style="margin-top: 8%">
+        <div class="col-lg-7 text-left">
+          <div class="card" style="width: 600px;">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-md-10">
+                  <div class="row">
+                    <div class="col-md-1" style="margin-right:2%; margin-top:1%">
+                      <img src='resources/img/perfil1.jpg' class="bd-placeholder-img rounded-circle" width="40"
+                        height="40" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                        aria-label="Placeholder: 140x140">
+                    </div>
+                    <div class="col-md-10">
+                      <h4>@RomiLopez</h4>
+                      <h6>Latitud:21.8628600° Longitud:-102.9110500°</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-1">
+                  <a href=""><button class="btn btn-outline-info my-2 my-sm-0" type="submit">Like</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <center>
+                <img src='resources/img/foto.jpg' class="bd-placeholder-img" width="550px" height="450px"
+                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+              </center>
+              <div style="margin: 1% 1%">
+                <h6>1 Likes - febrero 28, 2022</h6>
+                <h6></h6>
+                <h6>Selfi #ProgramacionWeb #Prototipo</h6>
+                <p>La belleza, el orden y el desorden se dan la mano en una imagen transmitida a través de esta cita
+                  Paul Cezanne.</p>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="card" style="width: 600px;">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-md-10">
+                  <div class="row">
+                    <div class="col-md-1" style="margin-right:2%; margin-top:1%">
+                      <img src='resources/img/perfil2.jpg' class="bd-placeholder-img rounded-circle" width="40"
+                        height="40" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"
+                        aria-label="Placeholder: 140x140">
+                    </div>
+                    <div class="col-md-10">
+                      <h4>@mollyx </h4>
+                      <h6>Latitud:21.8628600° Longitud:-102.9110500°</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-1">
+                  <a href=""><button class="btn btn-outline-info my-2 my-sm-0" type="submit">Like</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <center>
+                <img src='resources/img/boton1.jpg' class="bd-placeholder-img" width="550px" height="450px"
+                  preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+              </center>
+              <div style="margin: 1% 1%">
+                <h6>2 Likes - febrero 27, 2022</h6>
+                <h6></h6>
+                <h6>Objeto #ProgramacionWeb #Prototipo</h6>
+                <p>La valentía es saber a qué no se le ha de temer.</p>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <!-- <div class="card">
+            <div class="card-header bg-warning">
+              <h6>Contenido en tendencia</h6>
+            </div>
+            <div class="card-body">
+
+            </div>
+          </div> 
+          <br>-->
+          <div class="card">
+            <div class="card-header">
+              <h6>Sugerencias para ti</h6>
+            </div>
+            <div class="car-body">
+              <div class="row" style="margin: 2% 2% 2% 2%;">
+                <div class="col-md-1" style="margin-right:2%; margin-top:1%">
+                  <img src='resources/img/perfil4.jpg' class="bd-placeholder-img rounded-circle" width="40" height="40"
+                    preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+                </div>
+                <div class="col-md-10">
+                  <a href="perfil-publico.html" style="text-decoration: none; color: #000;">
+                    <h5 style="margin: 4% 3%;">@cardimax  </h5>
+                  </a>
+                </div>
+              </div>
+              <div class="row" style="margin: 2% 2% 2% 2%;">
+                <div class="col-md-1" style="margin-right:2%; margin-top:1%">
+                  <img src='resources/img/hyc.jpg' class="bd-placeholder-img rounded-circle" width="40" height="40"
+                    preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+                </div>
+                <div class="col-md-10">
+                  <h5 style="margin: 4% 3%;">@Sergio_Oz</h5>
+                </div>
+              </div>
+              <div class="row" style="margin: 2% 2% 5% 2%;">
+                <div class="col-md-1" style="margin-right:2%; margin-top:1%">
+                  <img src='resources/img/perfil2.jpg' class="bd-placeholder-img rounded-circle" width="40" height="40"
+                    preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
+                </div>
+                <div class="col-md-10">
+                  <h5 style="margin: 4% 3% 25px;">@mollyx</h5>
+                  <a href="fotografos-populares.html" style="color:rgb(167, 167, 167);">Ver fotógrafos mas populares...</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="margin-top: 5%;">
+            <div class="card-header">
+              <h6>Según tus busquedas</h6>
+            </div>
+            <div class="car-body">
+              <a href="buscar.html">
+                <h5 style="margin: 4% 3%;">#VacacionesCancun</h5>
+              </a>
+              <a href="">
+                <h5 style="margin: 4% 3%;">#EnCasa</h5>
+              </a>
+              <a href="">
+                <h5 style="margin: 4% 3%;">#ClaseVirtual</h5>
+              </a>
+              <a href="">
+                <h5 style="margin: 4% 3%;">#HolaMundo</h5>
+              </a>
+              <a href="hashtags-populares.html" style="color:rgb(167, 167, 167); margin: 4% 3% 15px;">Ver hashtags mas populares...</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.row -->
+    </div>
+    <hr>
+  </main>
+
+
+
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <span class="text-muted">Copyright &copy; PicTime by Hugiux</span>
+    </div>
+  </footer>
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="vendor/bootstrap/js/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/popper.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</html>

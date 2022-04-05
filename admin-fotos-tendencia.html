@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="es" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="ITVH">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Prototipo PicTime</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/all.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .fondo {
+            background-image: url(resources/img/fondo.jpg);
+            background-size: cover;
+            color: white;
+            text-shadow: 4px 4px 4px #000000;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100" style="background-color: rgb(245, 244, 241);">
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#" style="color:orange; font-size:25px; margin-left:21%">PicTime Admin</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <ul class="navbar-nav mr-auto" style="margin-left: 1%;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index-admin.html">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="perfil-admin.html">Mi perfíl</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Cerrar sesión</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="modal fade" id="delete" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title" style="color:#fff">Confirmar borrado</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Seguro que deseas borrar? Una vez eliminada no podras recuperarla.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal"
+                        data-target="#confirm-delete">Borrar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <h5 class="modal-title" style="color:#fff">Acción realizada</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>El elemento se ha borrado correctamente.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Aceptar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="confirm-update" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h5 class="modal-title" style="color:#fff">Acción realizada</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>El elemento se ha actulizado correctamente.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Aceptar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="confirm-create" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success">
+                    <h5 class="modal-title" style="color:#fff">Acción realizada</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>El elemento se ha creado correctamente.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="update" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document" style="position: center; top: 20%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actualizar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="tipo">Título</label>
+                    <input class="form-control" type="text" id="tipo" value="Artística">
+                    <br>
+                    <label for="codigo">Código</label>
+                    <input class="form-control" type="text" id="codigo" value="artistica">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal" data-toggle="modal"
+                        data-target="#confirm-update">Aceptar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="create" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document" style="position: center; top: 20%">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Añadir nuevo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="tipo">Título</label>
+                    <input class="form-control" type="text" id="tipo">
+                    <br>
+                    <label for="codigo">Código</label>
+                    <input class="form-control" type="text" id="codigo">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal"
+                        data-target="#confirm-create">Aceptar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main role="main" class="row align-item-center justify-content-center" style="margin-top: 100px;">
+        <div class="content" style="width:80%;">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index-admin.html">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="admin-fotos.html">Fotografías</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Estadística de tendencias</li>
+                </ol>
+            </nav>
+            <div>
+                <div style="margin-top:10px;">
+                    <h1>Estadística de tendencias</h1>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="admin-fotos-tendencia-grafica.html"><button type="button"
+                                    class="btn btn-primary">Ver gráfica</button></a>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control">
+                                <option value="1">Hashtag</option>
+                                <option value="2" >Tipo de foto</option>
+                                <option value="3" selected>Likes</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control">
+                                <option value="1">Enero</option>
+                                <option value="2" selected>Febrero</option>
+                                <option value="3">Marzo</option>
+                                <option value="4">Abril</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control">
+                                <option value="1">2021</option>
+                                <option value="2" selected>2022</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Posición</th>
+                            <th scope="col">Foto</th>
+                            <th scope="col">Tipo de foto</th>
+                            <th scope="col">Hashtags</th>
+                            <th scope="col">Autor</th>
+                            <th scope="col">Likes</th>
+                            <th scope="col">Visitas</th>
+                            <th scope="col">Imprimir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="resources/img/foto.jpg" width="100" height="100" /></td>
+                            <td>Retrato</td>
+                            <td>#holamundo #instagood #beautiful</td>
+                            <td>carlitosZap</td>
+                            <td>4</td>
+                            <td>visitas</td>
+                            <td>
+                                <a href="resources/pdf/foto2.pdf" title="Ficha" target="_blank"><i class="fas fa-print"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="resources/img/foto31.jpg" width="100" height="100" /></td>
+                            <td>Artística</td>
+                            <td>#VacacionesCancun #VacacionesCancun #holamundo</td>
+                            <td>joseMedina27</td>
+                            <td>2</td>
+                            <td>visitas</td>
+                            <td>
+                                <a href="resources/pdf/foto1.pdf" title="Ficha" target="_blank"><i
+                                        class="fas fa-print"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><img src="resources/img/foto34.jpg" width="100" height="100" /></td>
+                            <td>Paisaje</td>
+                            <td>#holamundo #happy #ProgramacionWeb</td>
+                            <td>vivianix</td>
+                            <td>2</td>
+                            <td>visitas</td>
+                            <td>
+                                <a href="resources/pdf/foto1.pdf" title="Ficha"><i class="fas fa-print"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">Copyright &copy; PicTime by Hugiux</span>
+        </div>
+    </footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="vendor/bootstrap/js/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</html>
